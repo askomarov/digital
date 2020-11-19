@@ -41,6 +41,13 @@
     <symbol id="arrow-right" viewBox="0 0 16 16" fill="none">
       <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#5A98D0" />
     </symbol>
+    <symbol id="footer-logo" viewBox="0 0 48 48" fill="none">
+      <circle cx="16" cy="24" r="16" fill="#98C3E8" />
+      <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2" />
+      <path
+        d="M38.3 31L33.38 17H29.96L25.06 31H28.04L28.88 28.48H34.46L35.3 31H38.3ZM31.68 20.18L33.6 25.9H29.76L31.68 20.18Z"
+        fill="#316099" />
+    </symbol>
   </svg>
 
   @@include('html/header.html')
@@ -73,7 +80,10 @@
           </li>
           <li class="about-content__item item-card">
             <div class="item-card__img-wrapper item-card__img-wrapper--interest">
-              <img width="224" height="197" src="img/card-item-1.png" alt="" />
+              <picture>
+                <source type="image/wepb" srcset="img/card-item-1.webp">
+                <img width="224" height="197" src="img/card-item-1.png" />
+              </picture>
             </div>
             <h3 class="item-card__heading">Bring Technology To Your Comfrotable Home</h3>
             <p class="item-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -86,7 +96,10 @@
           </li>
           <li class="about-content__item item-card">
             <div class="item-card__img-wrapper">
-              <img width="224" height="197" src="img/card-item-2.png" alt="" />
+              <picture>
+                <source type="image/wepb" srcset="img/card-item-2.webp">
+                <img width="224" height="197" src="img/card-item-2.png" />
+              </picture>
             </div>
             <h3 class="item-card__heading">Make Your business To Be
               Better Famous In Internet</h3>
@@ -100,7 +113,10 @@
           </li>
           <li class="about-content__item item-card">
             <div class="item-card__img-wrapper">
-              <img width="224" height="197" src="img/card-item-3.png" alt="" />
+              <picture>
+                <source type="image/wepb" srcset="img/card-item-3.webp">
+                <img width="224" height="197" src="img/card-item-3.png" />
+              </picture>
             </div>
             <h3 class="item-card__heading">Build Your Digital Product That Suitable For Your Need</h3>
             <p class="item-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -136,14 +152,13 @@
     </section>
 
     <section class="contact">
-      <div class="contact__background">
-        <div class="contact__container container">
-          <h2 class="contact__title">Intersted to work
-            with our team?</h2>
-          <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-          <a href="#" class="contact__btn main-btn">Let’s Talk</a>
-        </div>
+      <div class="contact__background"></div>
+      <div class="contact__container container">
+        <h2 class="contact__title">Intersted to work
+          with our team?</h2>
+        <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <a href="#" class="contact__btn main-btn">Let’s Talk</a>
       </div>
     </section>
   </main>

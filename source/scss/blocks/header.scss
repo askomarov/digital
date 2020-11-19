@@ -22,6 +22,11 @@
   width: 35px;
   height: 35px;
   background: transparent;
+  &[aria-expanded="true"] {
+    position: fixed;
+    top: 40px;
+    right: 80px;
+  }
   @media (min-width: $width-mobile+px) {
     // display: none;
   }
@@ -42,14 +47,18 @@
   opacity: 1;
   visibility: visible;
   display: flex;
-  position: absolute;
-  top: 35px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100%;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 20;
   transform: translate(0);
-}
-.nav-menu__item {
+  @media (max-width: $width-tablet+px) {
+    flex-direction: column;
+  }
 }
 .nav-menu__link {
   color: black;

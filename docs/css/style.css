@@ -24,7 +24,7 @@ body {
   height: 100%; }
 
 body {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -32,7 +32,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Roboto", Arial, sans-serif; }
+  font-family: "Gilroy", Arial, sans-serif; }
 
 input::-ms-clear {
   display: none; }
@@ -68,24 +68,24 @@ h6 {
 
 /* шрифты */
 @font-face {
-  font-family: "Roboto";
+  font-family: "Gilroy";
   font-style: normal;
-  font-weight: 400;
-  src: local("Roboto"), url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+  font-weight: 200;
+  src: local("Gilroy"), url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff");
   font-display: swap; }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;
-  src: local("Roboto medium"), url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-display: swap; }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: bold;
-  src: local("Roboto bold"), url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-display: swap; }
 
 .container {
@@ -182,6 +182,10 @@ h6 {
   width: 35px;
   height: 35px;
   background: transparent; }
+  .header__nav-toggle[aria-expanded="true"] {
+    position: fixed;
+    top: 40px;
+    right: 80px; }
 
 .nav-menu {
   display: flex;
@@ -198,12 +202,18 @@ h6 {
   opacity: 1;
   visibility: visible;
   display: flex;
-  position: absolute;
-  top: 35px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100%;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 20;
   transform: translate(0); }
+  @media (max-width: 767.98px) {
+    .nav-menu.active {
+      flex-direction: column; } }
 
 .nav-menu__link {
   color: black;
@@ -271,7 +281,9 @@ h6 {
   gap: 100px; }
 
 .about-content__item-title {
-  margin-left: -80px; }
+  margin-left: -80px;
+  margin-bottom: 58px;
+  max-width: 360px; }
 
 .about-content__item-title-text {
   font-size: 36px;
@@ -286,6 +298,11 @@ h6 {
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
   padding: 48px; }
+  @media (min-width: 374.98px) {
+    .item-card:hover {
+      box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.4); }
+      .item-card:hover .item-card__img-wrapper img {
+        transform: scale(1.1); } }
 
 .item-card__img-wrapper {
   position: relative;
@@ -293,6 +310,7 @@ h6 {
   height: 132px;
   margin-bottom: 51px; }
   .item-card__img-wrapper img {
+    transition: all 0.3s ease 0s;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -329,10 +347,10 @@ h6 {
   justify-content: space-between;
   width: 127px;
   padding-right: 4px; }
-
-.footer {
-  padding-top: 97px;
-  background: #316099; }
+  .item-card__link-more svg {
+    transition: all 0.3s ease 0s; }
+  .item-card__link-more:hover svg, .item-card__link-more:active svg {
+    transform: translateX(10px); }
 
 .clients {
   padding-top: 96px;
@@ -401,31 +419,37 @@ h6 {
     cursor: pointer; }
 
 .contact {
-  background: #5a98d0; }
+  background: #5a98d0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 91px; }
 
 .contact__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 32px;
-  margin-right: 0;
-  padding-bottom: 96px; }
-
-.contact__background {
-  margin-right: 96px;
-  background: #316099;
-  border-radius: 0px 200px 0px 0px;
-  padding-top: 91px;
-  padding-right: 197px;
-  position: relative; }
-  .contact__background:after {
-    content: '';
+  padding-bottom: 96px;
+  position: relative;
+  z-index: 2; }
+  .contact__container:after {
+    content: "";
     position: absolute;
     bottom: 0;
-    left: -197px;
+    right: 0px;
     height: 1px;
-    width: 100%;
+    width: 300%;
     background-color: rgba(255, 255, 255, 0.4); }
+
+.contact__background {
+  background: #316099;
+  position: absolute;
+  top: 0;
+  left: -96px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 0px 200px 0px 0px; }
 
 .contact__title {
   font-size: 36px;
@@ -448,3 +472,79 @@ h6 {
   grid-column: -1/-2;
   justify-self: center;
   align-self: center; }
+
+.footer {
+  background: #5a98d0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 96px;
+  padding-bottom: 64px; }
+
+.footer__background {
+  background: #316099;
+  position: absolute;
+  top: 0;
+  left: -96px;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.footer__container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 300px -webkit-max-content -webkit-max-content;
+  grid-template-columns: 300px max-content max-content;
+  gap: 77px; }
+
+.footer-contacts {
+  margin-right: 23px; }
+
+.footer-contacts__logo {
+  font-size: 28px;
+  line-height: 46px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  margin-bottom: 33px; }
+
+.footer-contacts__menu {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px; }
+
+.footer-contacts__item-title {
+  flex: 0 1 10%;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  font-weight: bold; }
+
+.footer-contacts__item-desc {
+  flex: 1 1 90%;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  font-weight: 400; }
+
+.footer__manu-title {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 34px; }
+
+.footer__menu-item {
+  margin-bottom: 18px; }
+  .footer__menu-item:last-child {
+    margin-bottom: 0; }
+
+.footer__menu-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Gilroy", "Arial", sans-serif; }

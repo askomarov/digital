@@ -49,7 +49,7 @@ const makewebp = () => {
     .pipe(webp({ quality: 70 }))
     .pipe(gulp.dest('source/img'))
 };
-exports.webp = makewebp;
+exports.makewebp = makewebp;
 
 //images
 const images = () => {

@@ -1,26 +1,25 @@
 /* шрифты */
 @font-face {
-  font-family: "Roboto";
+  font-family: "Gilroy";
   font-style: normal;
-  font-weight: 400;
-  src: local("Roboto"), url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+  font-weight: 200;
+  src: local("Gilroy"), url("../fonts/Gilroy-Thin.woff2") format("woff2"),
+    url("../fonts/Gilroy-Thin.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;
-  src: local("Roboto medium"), url("../fonts/robotomedium.woff2") format("woff2"),
-    url("../fonts/robotomedium.woff") format("woff");
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: bold;
-  src: local("Roboto bold"), url("../fonts/robotobold.woff2") format("woff2"),
-    url("../fonts/robotobold.woff") format("woff");
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-display: swap;
 }
