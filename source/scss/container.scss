@@ -19,10 +19,10 @@ $width-mobile: 374.98;
   @media (min-width: $width-tablet+px) {
     padding-left: 50px;
     padding-right: 50px;
+    max-width: $max-width + px;
   }
 
   @media (min-width: $width-desktop+px) {
-    max-width: $max-width + px;
     padding-left: 0;
     padding-right: 0;
   }

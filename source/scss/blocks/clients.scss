@@ -29,7 +29,7 @@
 }
 .clients-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(235px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
 }
 .clients-list__item {
   font-size: 20px;
@@ -41,29 +41,33 @@
   align-items: center;
   justify-content: center;
   height: 128px;
-  &:first-child {
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-  }
-  &:nth-child(2) {
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-  }
-  &:nth-child(3) {
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-  }
-  &:nth-child(4) {
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-  }
-  &:nth-child(5) {
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-  }
-  &:nth-child(6) {
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
-  }
-  &:nth-child(7) {
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+  border: 1px solid #ffffff;
+  @media (min-width: $width-desktop+px) {
+    border: none;
+    &:first-child {
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    &:nth-child(2) {
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    &:nth-child(3) {
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    &:nth-child(4) {
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    &:nth-child(5) {
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    &:nth-child(6) {
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    &:nth-child(7) {
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
   }
 }
 .clients-list__item--more {

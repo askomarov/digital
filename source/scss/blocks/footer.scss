@@ -18,8 +18,11 @@
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 300px max-content max-content;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 77px;
+  @media (min-width: $width-desktop+px) {
+    grid-template-columns: 300px max-content max-content;
+  }
 }
 .footer-contacts {
   margin-right: 23px;
@@ -31,9 +34,11 @@
   color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 15px;
+  justify-content: flex-start;
   margin-bottom: 33px;
+  svg {
+    margin-right: 15px;
+  }
 }
 .footer-contacts__menu {
   display: flex;
