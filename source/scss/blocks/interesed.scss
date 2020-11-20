@@ -1,13 +1,13 @@
-.contact {
+.interesed {
   background: #5a98d0;
   position: relative;
   overflow: hidden;
   padding-top: 91px;
 }
 
-.contact__container {
+.interesed__container {
   display: grid;
-  margin-right: 150px;
+
   grid-template-columns: 1fr;
   align-items: center;
   gap: 32px;
@@ -16,6 +16,7 @@
   z-index: 2;
   @media (min-width: $width-tablet+px) {
     margin-right: auto;
+    margin-right: 150px;
   }
   @media (min-width: $width-tablet+px) {
     grid-template-columns: 1fr 1fr;
@@ -38,7 +39,7 @@
     }
   }
 }
-.contact__background {
+.interesed__background {
   background: #316099;
   position: absolute;
   top: 0;
@@ -52,20 +53,20 @@
     border-radius: 0px 200px 0px 0px;
   }
 }
-.contact__title {
+.interesed__title {
   font-size: 36px;
   line-height: 46px;
   letter-spacing: 0.05em;
   color: #ffffff;
 }
-.contact__text {
+.interesed__text {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
   color: #ffffff;
   opacity: 0.6;
 }
-.contact__btn {
+.interesed__btn {
   width: 220px;
   min-height: 56px;
   background: #5a98d0;
@@ -77,6 +78,6 @@
   }
 }
 
-.contact-page .contact {
+.contact-page .interesed {
   background: #ffffff;
 }

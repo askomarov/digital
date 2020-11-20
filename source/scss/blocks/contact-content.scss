@@ -1,10 +1,11 @@
 .contacs {
-  padding-top: 57px;
-  padding-bottom: 96px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (min-width: $width-mobile+px) {
+    padding-top: 57px;
+    padding-bottom: 96px;
+  }
 }
-.contacs__container {
-}
-
 .contact-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -16,11 +17,18 @@
     row-gap: 96px;
   }
 }
-.info-column {
-}
 .info-column__img-wrapper {
-}
-.info-column__list {
+  width: 100%;
+  height: 181px;
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+  }
 }
 .info-column__item {
   margin-bottom: 40px;
@@ -68,14 +76,20 @@
 .contact-form__body {
   box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
-  padding: 56px;
+  padding: 15px;
+  @media (min-width: $width-mobile+px) {
+    padding: 56px;
+  }
 }
 .contact-form__title {
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.04em;
   color: var(--main-color);
-  margin-bottom: 48px;
+  margin-bottom: 15px;
+  @media (min-width: $width-mobile+px) {
+    margin-bottom: 48px;
+  }
 }
 .contact-form__label {
   font-size: 16px;
@@ -95,7 +109,10 @@
   line-height: 30px;
   padding: 21px 42px;
   text-transform: capitalize;
-  margin-bottom: 32px;
+  margin-bottom: 15px;
+  @media (min-width: $width-mobile+px) {
+    margin-bottom: 32px;
+  }
   &::placeholder {
     font-size: 16px;
     line-height: 30px;
@@ -113,7 +130,10 @@
   line-height: 30px;
   padding: 21px 42px;
   min-height: 144px;
-  margin-bottom: 72px;
+  margin-bottom: 20px;
+  @media (min-width: $width-mobile+px) {
+    margin-bottom: 72px;
+  }
   &::placeholder {
     font-size: 16px;
     line-height: 30px;
@@ -127,8 +147,11 @@
   width: 100%;
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
-  min-height: 72px;
+  min-height: 50px;
   text-transform: uppercase;
+  @media (min-width: $width-mobile+px) {
+    min-height: 72px;
+  }
 }
 
 .contact-content__map-wrapper {
@@ -147,6 +170,4 @@
   @media (min-width: $width-tablet+px) {
     height: 480px;
   }
-}
-.contact-content__map {
 }

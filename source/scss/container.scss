@@ -7,6 +7,7 @@ $width-mobile: 374.98;
 .container {
   box-sizing: border-box;
   min-width: $min-width + px;
+  max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -29,6 +30,5 @@ $width-mobile: 374.98;
 }
 
 .container-fluid {
-  min-width: 320px;
   max-width: 100%;
 }

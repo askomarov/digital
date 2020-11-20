@@ -12,11 +12,14 @@
   }
 }
 .clients__header {
-  display: flex;
-  align-items: center;
+  text-align: center;
   margin-bottom: 60px;
   @media (min-width: $width-tablet+px) {
     margin-bottom: 123px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 .clients__title {
@@ -24,8 +27,10 @@
   line-height: 46px;
   letter-spacing: 0.05em;
   color: #ffffff;
-  margin-right: 97px;
   flex: 0 0 225px;
+  @media (min-width: $width-tablet+px) {
+    // margin-right: 97px;
+  }
 }
 .clients__text {
   font-size: 16px;
@@ -33,7 +38,11 @@
   letter-spacing: 0.05em;
   color: #ffffff;
   opacity: 0.6;
-  max-width: 540px;
+
+  margin: 0;
+  @media (min-width: $width-desktop+px) {
+    max-width: 540px;
+  }
 }
 .clients-list {
   display: grid;

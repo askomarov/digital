@@ -33,7 +33,11 @@
 }
 .about-content__item-title-text {
   font-size: 36px;
-  line-height: 46px;
+  font-size: clamp(22px, 4vw, 36px);
+  line-height: 22px;
   letter-spacing: 0.05em;
   color: #316099;
+  @media (min-width: $width-tablet+px) {
+    line-height: 46px;
+  }
 }

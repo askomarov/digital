@@ -25,10 +25,14 @@
 }
 .promo__title {
   font-size: 64px;
-  line-height: 74px;
+  font-size: clamp(28px, 4vw, 64px);
+  line-height: 24px;
   letter-spacing: 0.04em;
   color: var(--main-color);
   margin-bottom: 32px;
+  @media (min-width: $width-tablet+px) {
+    line-height: 74px;
+  }
 }
 .promo__text {
   line-height: 26px;

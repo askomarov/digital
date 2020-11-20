@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
       this.setAttribute("aria-expanded", "false");
       this.setAttribute("aria-label", "menu");
       navWrapper.classList.remove("active");
+      document.body.classList.remove("lock");
     } else {
       navWrapper.classList.add("active");
+      document.body.classList.add("lock");
       this.setAttribute("aria-label", "close menu");
       this.setAttribute("aria-expanded", "true");
     }
