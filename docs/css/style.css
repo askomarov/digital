@@ -677,7 +677,7 @@ h6 {
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.04em;
-  color: #1f3f68;
+  color: var(--main-color);
   font-weight: bold;
   margin-bottom: 24px; }
 
@@ -685,13 +685,16 @@ h6 {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.04em;
-  color: #1f3f68;
+  color: var(--main-color);
   opacity: 0.6;
   margin-bottom: 16px; }
 
 .info-column__desc--phone {
   padding-left: 40px;
   background: url("../img/icon-phone.svg") left center no-repeat; }
+  .info-column__desc--phone a {
+    color: var(--main-color);
+    text-decoration: none; }
 
 .info-column__desc--www {
   padding-left: 40px;
