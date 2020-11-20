@@ -1,15 +1,23 @@
 .clients {
-  padding-top: 96px;
-  padding-bottom: 125px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: #5a98d0;
-  border-radius: 200px 0px 0px 0px;
-}
-.clients__container {
+  border-radius: 100px 0px 0px 0px;
+  @media (min-width: $width-mobile+px) {
+    border-radius: 200px 0px 0px 0px;
+  }
+  @media (min-width: $width-tablet+px) {
+    padding-top: 96px;
+    padding-bottom: 125px;
+  }
 }
 .clients__header {
   display: flex;
   align-items: center;
-  margin-bottom: 123px;
+  margin-bottom: 60px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 123px;
+  }
 }
 .clients__title {
   font-size: 36px;

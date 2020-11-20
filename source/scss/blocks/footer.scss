@@ -9,10 +9,13 @@
   background: #316099;
   position: absolute;
   top: 0;
-  left: -96px;
+  left: -20px;
   width: 100%;
   height: 100%;
   z-index: 1;
+  @media (min-width: $width-mobile+px) {
+    left: -96px;
+  }
 }
 .footer__container {
   position: relative;
@@ -25,7 +28,10 @@
   }
 }
 .footer-contacts {
-  margin-right: 23px;
+  margin-right: 60px;
+  @media (min-width: $width-desktop+px) {
+    margin-right: 23px;
+  }
 }
 .footer-contacts__logo {
   font-size: 28px;

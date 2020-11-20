@@ -22,14 +22,6 @@
   width: 35px;
   height: 35px;
   background: transparent;
-  &[aria-expanded="true"] {
-    position: fixed;
-    top: 40px;
-    right: 80px;
-  }
-  @media (min-width: $width-mobile+px) {
-    // display: none;
-  }
 }
 .nav-menu {
   display: flex;

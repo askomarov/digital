@@ -182,10 +182,6 @@ h6 {
   width: 35px;
   height: 35px;
   background: transparent; }
-  .header__nav-toggle[aria-expanded="true"] {
-    position: fixed;
-    top: 40px;
-    right: 80px; }
 
 .nav-menu {
   display: flex;
@@ -242,12 +238,22 @@ h6 {
   background: linear-gradient(0deg, #98c3e8 8.84%, rgba(152, 195, 232, 0) 31.12%); }
 
 .promo__container {
-  padding-top: 101px;
-  padding-bottom: 190px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  @media (min-width: 767.98px) {
+    .promo__container {
+      padding-top: 101px;
+      padding-bottom: 190px; } }
 
 .promo__content {
   max-width: 600px;
-  margin-right: auto; }
+  margin-right: auto;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px); }
+  @media (min-width: 767.98px) {
+    .promo__content {
+      -webkit-backdrop-filter: none;
+              backdrop-filter: none; } }
 
 .promo__title {
   font-size: 64px;
@@ -257,12 +263,16 @@ h6 {
   margin-bottom: 32px; }
 
 .promo__text {
-  font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
   color: var(--main-color);
-  opacity: 0.6;
-  margin-bottom: 71px; }
+  margin-bottom: 71px;
+  font-size: clamp(16px, 4vh, 20px); }
+  @media (min-width: 767.98px) {
+    .promo__text {
+      color: var(--main-color);
+      opacity: 0.6;
+      font-size: 16px; } }
 
 .promo__btn {
   width: 220px;
@@ -271,8 +281,12 @@ h6 {
   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2); }
 
 .about {
-  padding-top: 98px;
-  padding-bottom: 212px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  @media (min-width: 767.98px) {
+    .about {
+      padding-top: 98px;
+      padding-bottom: 212px; } }
 
 .about-content {
   display: grid;
@@ -367,15 +381,25 @@ h6 {
     transform: translateX(10px); }
 
 .clients {
-  padding-top: 96px;
-  padding-bottom: 125px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: #5a98d0;
-  border-radius: 200px 0px 0px 0px; }
+  border-radius: 100px 0px 0px 0px; }
+  @media (min-width: 374.98px) {
+    .clients {
+      border-radius: 200px 0px 0px 0px; } }
+  @media (min-width: 767.98px) {
+    .clients {
+      padding-top: 96px;
+      padding-bottom: 125px; } }
 
 .clients__header {
   display: flex;
   align-items: center;
-  margin-bottom: 123px; }
+  margin-bottom: 60px; }
+  @media (min-width: 767.98px) {
+    .clients__header {
+      margin-bottom: 123px; } }
 
 .clients__title {
   font-size: 36px;
@@ -444,6 +468,7 @@ h6 {
 
 .contact__container {
   display: grid;
+  margin-right: 150px;
   grid-template-columns: 1fr;
   align-items: center;
   gap: 32px;
@@ -452,10 +477,10 @@ h6 {
   z-index: 2; }
   @media (min-width: 767.98px) {
     .contact__container {
-      grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 1366px) {
+      margin-right: auto; } }
+  @media (min-width: 767.98px) {
     .contact__container {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4); } }
+      grid-template-columns: 1fr 1fr; } }
   .contact__container:after {
     content: "";
     position: absolute;
@@ -466,17 +491,22 @@ h6 {
     background-color: rgba(255, 255, 255, 0.4); }
     @media (max-width: 1366px) {
       .contact__container:after {
-        display: none; } }
+        width: 80%;
+        left: 0; } }
 
 .contact__background {
   background: #316099;
   position: absolute;
   top: 0;
-  left: -96px;
+  left: -20px;
   width: 100%;
   height: 100%;
   z-index: 1;
-  border-radius: 0px 200px 0px 0px; }
+  border-radius: 0px 100px 0px 0px; }
+  @media (min-width: 374.98px) {
+    .contact__background {
+      left: -96px;
+      border-radius: 0px 200px 0px 0px; } }
 
 .contact__title {
   font-size: 36px;
@@ -513,10 +543,13 @@ h6 {
   background: #316099;
   position: absolute;
   top: 0;
-  left: -96px;
+  left: -20px;
   width: 100%;
   height: 100%;
   z-index: 1; }
+  @media (min-width: 374.98px) {
+    .footer__background {
+      left: -96px; } }
 
 .footer__container {
   position: relative;
@@ -530,7 +563,10 @@ h6 {
       grid-template-columns: 300px max-content max-content; } }
 
 .footer-contacts {
-  margin-right: 23px; }
+  margin-right: 60px; }
+  @media (min-width: 1366px) {
+    .footer-contacts {
+      margin-right: 23px; } }
 
 .footer-contacts__logo {
   font-size: 28px;

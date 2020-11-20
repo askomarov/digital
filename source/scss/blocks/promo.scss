@@ -8,12 +8,20 @@
 .container-fluid {
 }
 .promo__container {
-  padding-top: 101px;
-  padding-bottom: 190px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 101px;
+    padding-bottom: 190px;
+  }
 }
 .promo__content {
   max-width: 600px;
   margin-right: auto;
+  backdrop-filter: blur(2px);
+  @media (min-width: $width-tablet+px) {
+    backdrop-filter: none;
+  }
 }
 .promo__title {
   font-size: 64px;
@@ -23,12 +31,16 @@
   margin-bottom: 32px;
 }
 .promo__text {
-  font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
   color: var(--main-color);
-  opacity: 0.6;
   margin-bottom: 71px;
+  font-size: clamp(16px, 4vh, 20px);
+  @media (min-width: $width-tablet+px) {
+    color: var(--main-color);
+    opacity: 0.6;
+    font-size: 16px;
+  }
 }
 .promo__btn {
   width: 220px;
