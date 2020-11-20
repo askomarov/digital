@@ -1,0 +1,24 @@
+.contact-promo {
+  padding: 50px;
+  background: var(--main-color) url("../img/contact-us-background.jpg") no-repeat;
+  background-size: cover;
+}
+.contact-promo__container {
+  text-align: center;
+}
+.contact-promo__title {
+  font-size: 44px;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.contact-promo__text {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  vertical-align: middle; 
+  max-width: 780px;
+}

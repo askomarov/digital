@@ -230,6 +230,9 @@ h6 {
     width: 100%;
     background: var(--main-color); }
 
+.contact-page .header {
+  margin-bottom: 41px; }
+
 .promo {
   background: url("../img/illustration.png") no-repeat;
   background-position: top right; }
@@ -532,6 +535,9 @@ h6 {
       grid-row: 1/3;
       grid-column: -1/-2; } }
 
+.contact-page .contact {
+  background: #ffffff; }
+
 .footer {
   background: #5a98d0;
   position: relative;
@@ -617,3 +623,176 @@ h6 {
   color: #ffffff;
   font-weight: 400;
   font-family: "Gilroy", "Arial", sans-serif; }
+
+.contact-page .footer {
+  background: #ffffff; }
+
+.contact-promo {
+  padding: 50px;
+  background: var(--main-color) url("../img/contact-us-background.jpg") no-repeat;
+  background-size: cover; }
+
+.contact-promo__container {
+  text-align: center; }
+
+.contact-promo__title {
+  font-size: 44px;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+  color: #ffffff; }
+
+.contact-promo__text {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 780px; }
+
+.contacs {
+  padding-top: 57px;
+  padding-bottom: 96px; }
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr -webkit-min-content;
+  grid-template-rows: 1fr min-content;
+  row-gap: 30px; }
+  @media (min-width: 940px) {
+    .contact-content {
+      grid-template-columns: 300px 1fr;
+      -moz-column-gap: 88px;
+           column-gap: 88px;
+      row-gap: 96px; } }
+
+.info-column__item {
+  margin-bottom: 40px; }
+  .info-column__item:last-child {
+    margin-bottom: 0; }
+
+.info-column__title {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #1f3f68;
+  font-weight: bold;
+  margin-bottom: 24px; }
+
+.info-column__desc {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  color: #1f3f68;
+  opacity: 0.6;
+  margin-bottom: 16px; }
+
+.info-column__desc--phone {
+  padding-left: 40px;
+  background: url("../img/icon-phone.svg") left center no-repeat; }
+
+.info-column__desc--www {
+  padding-left: 40px;
+  background: url("../img/icon-globe.svg") left center no-repeat; }
+
+.info-column__desc--mail {
+  padding-left: 40px;
+  background: url("../img/icon-mail.svg") left center no-repeat; }
+
+@media (max-width: 767.98px) {
+  .contact-form {
+    order: -1; } }
+
+.contact-form__body {
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  padding: 56px; }
+
+.contact-form__title {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: var(--main-color);
+  margin-bottom: 48px; }
+
+.contact-form__label {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: var(--main-color);
+  opacity: 0.8;
+  display: block;
+  width: 100%;
+  margin-bottom: 8px; }
+
+.contact-form__input {
+  border: 1px solid rgba(53, 110, 173, 0.4);
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 21px 42px;
+  text-transform: capitalize;
+  margin-bottom: 32px; }
+  .contact-form__input::-moz-placeholder {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1f3f68;
+    opacity: 0.2; }
+  .contact-form__input::placeholder {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1f3f68;
+    opacity: 0.2; }
+
+.contact-form__comment {
+  resize: none;
+  border: 1px solid rgba(53, 110, 173, 0.4);
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 21px 42px;
+  min-height: 144px;
+  margin-bottom: 72px; }
+  .contact-form__comment::-moz-placeholder {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1f3f68;
+    opacity: 0.2; }
+  .contact-form__comment::placeholder {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1f3f68;
+    opacity: 0.2; }
+
+.contact-form__btn {
+  background: #5a98d0;
+  width: 100%;
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  min-height: 72px;
+  text-transform: uppercase; }
+
+.contact-content__map-wrapper {
+  grid-column: 1/-1;
+  max-width: 100%;
+  position: relative;
+  height: 320px; }
+  .contact-content__map-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: contain;
+       object-fit: contain; }
+  @media (min-width: 767.98px) {
+    .contact-content__map-wrapper {
+      height: 480px; } }
