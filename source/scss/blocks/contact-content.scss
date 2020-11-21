@@ -107,11 +107,12 @@
   width: 100%;
   font-size: 16px;
   line-height: 30px;
-  padding: 21px 42px;
+  padding: 10px;
   text-transform: capitalize;
   margin-bottom: 15px;
   @media (min-width: $width-mobile+px) {
     margin-bottom: 32px;
+    padding: 21px 42px;
   }
   &::placeholder {
     font-size: 16px;

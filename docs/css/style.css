@@ -242,9 +242,11 @@ h6 {
   max-width: 600px;
   margin-right: auto;
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px); }
+          backdrop-filter: blur(2px);
+  text-align: center; }
   @media (min-width: 767.98px) {
     .promo__content {
+      text-align: left;
       -webkit-backdrop-filter: none;
               backdrop-filter: none; } }
 
@@ -275,7 +277,11 @@ h6 {
   width: 220px;
   height: 56px;
   background: #5a98d0;
-  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2); }
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  margin: 0 auto; }
+  @media (min-width: 767.98px) {
+    .promo__btn {
+      margin: 0; } }
 
 .about {
   padding-top: 60px;
@@ -783,12 +789,13 @@ h6 {
   width: 100%;
   font-size: 16px;
   line-height: 30px;
-  padding: 21px 42px;
+  padding: 10px;
   text-transform: capitalize;
   margin-bottom: 15px; }
   @media (min-width: 374.98px) {
     .contact-form__input {
-      margin-bottom: 32px; } }
+      margin-bottom: 32px;
+      padding: 21px 42px; } }
   .contact-form__input::-moz-placeholder {
     font-size: 16px;
     line-height: 30px;
