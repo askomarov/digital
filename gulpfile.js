@@ -26,7 +26,7 @@ const server = (done) => {
     },
     port: 3000,
     cors: true,
-    notify: false,
+    notify: true,
     ui: false,
   });
   done();
@@ -141,6 +141,6 @@ exports.watcher = watcher;
 const build = gulp.series(clean, copy, gulp.parallel(html, styles, scripts, sprite));
 exports.build = build;
 
-let watch = gulp.parallel(build, watcher, server);
+let watch = gulp.series(build, gulp.parallel(watcher, server));
 exports.watch = watch;
 exports.default = watch;

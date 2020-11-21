@@ -2,8 +2,12 @@
   background: #5a98d0;
   position: relative;
   overflow: hidden;
-  padding-top: 96px;
-  padding-bottom: 64px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 96px;
+    padding-bottom: 64px;
+  }
 }
 .footer__background {
   background: #316099;
@@ -13,7 +17,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  @media (min-width: $width-mobile+px) {
+  @media (min-width: $width-tablet+px) {
     left: -96px;
   }
 }
@@ -22,8 +26,9 @@
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 77px;
+  gap: 20px;
   @media (min-width: $width-desktop+px) {
+    gap: 77px;
     grid-template-columns: 300px max-content max-content;
   }
 }
@@ -40,10 +45,13 @@
   color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   margin-bottom: 33px;
+  justify-content: center;
   svg {
     margin-right: 15px;
+  }
+  @media (min-width: $width-tablet+px) {
+    justify-content: flex-start;
   }
 }
 .footer-contacts__menu {
@@ -73,6 +81,10 @@
   letter-spacing: 0.05em;
   color: #ffffff;
   margin-bottom: 34px;
+  text-align: center;
+  @media (min-width: $width-tablet+px) {
+    text-align: left;
+  }
 }
 .footer__menu-item {
   margin-bottom: 18px;
@@ -80,6 +92,7 @@
     margin-bottom: 0;
   }
 }
+
 .footer__menu-link {
   color: #ffffff;
   font-weight: 400;
