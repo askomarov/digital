@@ -941,9 +941,9 @@ h6 {
     -webkit-animation: bounce 0.6s;
             animation: bounce 0.6s; }
 
-.contact-form {
+.contact-form__body {
   background: #ffffff; }
-  .contact-form--error {
+  .contact-form__body--error {
     -webkit-animation: shake 0.6s;
             animation: shake 0.6s; }
 

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let talkModal = document.querySelector(".contact-modal");
 if (talkModal != null) {
   let talkModalBtnShow = document.querySelector(".interesed__btn");
-  let contactForm = talkModal.querySelector(".contact-form");
+  let contactForm = talkModal.querySelector(".contact-form__body");
   let loginName = talkModal.querySelector("#name-field");
   let loginEmail = talkModal.querySelector("#mail-field");
   let feedbackModal = document.querySelector(".feedback-done");
@@ -34,19 +34,20 @@ if (talkModal != null) {
   let closeModal = function () {
     if (talkModal.classList.contains("contact-modal--open")) {
       talkModal.classList.remove("contact-modal--open");
-      contactForm.classList.remove("contact-form--error");
+      contactForm.classList.remove("contact-form__body--error");
     };
   };
 
   let deleteFeedbackDone = function () {
     feedbackModal.classList.remove("feedback-done--open");
+    contactForm.reset();
   };
 
   let formValidation = function () {
     if (!loginName.value || !loginEmail.value) {
-      contactForm.classList.remove("contact-form--error");
+      contactForm.classList.remove("contact-form__body--error");
       contactForm.offsetWidth = contactForm.offsetWidth;
-      contactForm.classList.add("contact-form--error");
+      contactForm.classList.add("contact-form__body--error");
     } else {
       talkModal.classList.remove("contact-modal--open");
       feedbackModal.classList.add("feedback-done--open");
