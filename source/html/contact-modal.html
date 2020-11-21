@@ -1,0 +1,22 @@
+<section class="contact-modal">
+  <div class="contact-modal__wrapper">
+
+    <div class="contact-form">
+      <form method="POST" action="http://foo.com" class="contact-form__body" novalidate>
+        <h2 class="contact-form__title">SEND US MESSAGE</h2>
+        <label class="contact-form__label" for="name-field">Full Name
+        </label>
+        <input class="contact-form__input" type="text" name="name-field" id="name-field" placeholder="Your Name">
+        <label class="contact-form__label" for="mail-field">Email
+        </label>
+        <input class="contact-form__input" type="mail" name="mail-field" id="mail-field" placeholder="Your Mail"
+          pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+        <label for="comment-field" class="contact-form__label">Message
+        </label>
+        <textarea class="contact-form__comment" name="comment-field" id="comment-field"
+          placeholder="Your Message"></textarea>
+        <button class="contact-form__btn main-btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
